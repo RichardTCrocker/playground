@@ -10,6 +10,7 @@ def hello_world():
 @app.route('/play')
 @app.route('/play/<int:num>')
 @app.route('/play/<int:num>/<color>')
+@app.route('/play/<color>/<int:num>')
 @app.route('/play/<color>')
 def play(num=3, color='blue'):
     return render_template("index.html", num=num, color=color)
